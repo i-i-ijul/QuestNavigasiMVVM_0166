@@ -29,6 +29,12 @@ fun nampilindata(
         Pair(stringResource(R.string.jenisKelamin),"Lainnya"),
         Pair(stringResource(R.string.alamat),"Yogyakarta"),
     )
-
+    Scaffold(modifier = Modifier,
+        {
+           TopAppBar(
+               title = { Text(text = stringResource(R.string.tampil), color = Color.White)},
+               colors = TopAppBarDefaults.mediumTopAppBarColors(colorResource(R.color.teal_700))
+           )
+        })
     }
 }
