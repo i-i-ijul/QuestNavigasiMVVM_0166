@@ -35,6 +35,18 @@ fun nampilindata(
                title = { Text(text = stringResource(R.string.tampil), color = Color.White)},
                colors = TopAppBarDefaults.mediumTopAppBarColors(colorResource(R.color.teal_700))
            )
-        })
+        }) { isiRuang ->
+        Column(modifier = Modifier.padding(isiRuang),
+            verticalArrangement = Arrangement.SpaceBetween) {
+            Column(modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium)),
+                verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small)))
+            {
+                items.forEach { item ->
+                    Column{
+                        Text(text = item.first.uppercase(), fontSize = 16.sp)
+                    }
+                }
+            }
+        }
     }
 }
